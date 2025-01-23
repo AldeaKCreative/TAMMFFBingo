@@ -1,0 +1,113 @@
+/* General Styling */
+body {
+    background: linear-gradient(45deg, #FF5733, #FFC300, #DAF7A6, #33FF57, #33CFFF, #8E44AD);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Bingo Card Container */
+.bingo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Bingo Card Grid */
+#bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 5px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+/* Bingo Cells */
+.bingo-cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid #FFFFFF;
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Responsive font size */
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Toggled Bingo Cells */
+.bingo-cell.clicked {
+    background-color: #FFFFED;
+    color: #000000;
+}
+
+/* Free Space Styling */
+.free-space {
+    background-color: #FFFFED;
+    color: #000000;
+}
+
+/* Shuffle Button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2ECC71;
+    color: #FFFFFF;
+}
+
+button:active {
+    background-color: #273746;
+    color: #FFFFFF;
+}
+
+/* Date and Time Display */
+.timestamp {
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+/* Rainbow Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
